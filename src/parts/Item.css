@@ -37,3 +37,9 @@
     font-family: FreeMono, monospace;
     font-size: 13pt;
 }
+
+.InputEdit:hover{
+    transition-duration: 0.6s;
+    background-color:lightgrey;
+}
+

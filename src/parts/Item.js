@@ -48,7 +48,7 @@ const Item = ({item, removeItemClick, itemClick, saveItemClick}) => {
             >
                 <h style={{visibility: 'visible'}} className="ItemText" onClick={() => itemClick(item.id)}>{item.description}</h>
                 <form style={{visibility: 'hidden'}}>
-                    <input onClick={onClickInput} value={text} onChange={(e) => setText(e.target.value)}></input>
+                    <input className="InputEdit" onClick={onClickInput} value={text} onChange={(e) => setText(e.target.value)}></input>
                 </form>
                 <button style={style, {visibility: 'hidden'}} onClick={() => saveItemClick(setVisible, text, item.id)} className="ButtonRemove">Save</button>
                 <button style={style} className="ButtonRemove" onClick={editItemClick}>Edit</button>
