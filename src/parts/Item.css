@@ -12,6 +12,7 @@
 
 .Item:hover{
     background-color: #F38632;
+    transition-duration: 0.1s;
 }
 
 .ButtonRemove{

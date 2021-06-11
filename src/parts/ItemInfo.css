@@ -1,0 +1,48 @@
+.Main{
+    margin: auto;
+    width: 500px;
+    outline-style: dotted;
+}
+
+.pgTitle{
+    text-align: center;
+}
+
+.pgButton{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    width: 200px;
+    height: 30px;
+    margin: 20px 150px;
+    font: optional;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    font-family: Courier New, monospace;
+}
+
+.pgButton:hover{
+    background-color: white; 
+    color: black;
+    border: 2px solid black;
+}
+
+.pgText1{
+    color: #F38632;
+    font-family: Andale Mono, monospace;
+}
+
+.pgText2{
+    font-family: Courier New, monospace;
+}
+
+.pgText3{
+    color: #F38632;
+    font-family: Andale Mono, monospace;
+}
+
+.pgText4{
+    font-family: Courier New, monospace;
+}
