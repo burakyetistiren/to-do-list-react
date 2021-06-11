@@ -18,6 +18,7 @@ const App = () => {
   const [items, setItems] = useState([])
   const [id, setId] = useState(0)
   const [returnItem, getItem] = useState()
+  const [disable, setDisable] = useState(true)
   let history = useHistory()
 
   const addItem = (item) => {
@@ -36,9 +37,12 @@ const App = () => {
 
   const buttonOnClick = () => {
     addItem({id: id, description: text})
+    setText('Enter a Task')
+    setDisable(true)
   }
 
   const areaOnClick = () => {
+    setDisable(false)
     setText('')
   }
 
@@ -52,13 +56,12 @@ const App = () => {
   }
   
   return(
-    
       <Switch>
         <Route exact path="/home">
           <div className="Header">
             <Title />
             <Input onClickInputArea={areaOnClick} text={text} setText={setText}/>
-            <AddButton add={buttonOnClick}/>
+            <AddButton state={disable} add={buttonOnClick}/>
           </div>
           <div className="Items">
             <Items items={items} itemClick={itemOnClick} removeItemClick={removeItemClick}/>

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import './Button.css'
 
-const AddButton = ({label, add}) => {
+const AddButton = ({label, add, state}) => {
 
     return(
-        <button className='Button' onClick={add}>{label}</button>
+        <button disabled={state} className='Button' onClick={add}>{label}</button>
     )
 }
 
