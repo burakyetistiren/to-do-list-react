@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import {BrowserRouter as Link, Route, Router} from 'react-router-dom'
 
-const Item = ({item, itemClick}) => {
+const Item = ({item, removeItemClick, itemClick}) => {
     return(
-        <div onClick={() => itemClick(item.id)}>
-            <h2>{item.description}{item.id}</h2>
+        <div>
+            <h2 onClick={() => itemClick(item.id)}>{item.description}{item.id}</h2>
+            <button onClick={() => removeItemClick(item.id)}>Remove</button>
         </div>
     )
 }
