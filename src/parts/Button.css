@@ -1,0 +1,21 @@
+.Button{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    width: 200px;
+    height: 30px;
+    margin: 20px 45px;
+    font: optional;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    font-family: Courier New, monospace;
+    
+}
+
+.Button:hover{
+    background-color: white; 
+    color: black;
+    border: 2px solid black;
+}

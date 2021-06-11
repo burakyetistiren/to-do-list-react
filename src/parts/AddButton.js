@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
+import './Button.css'
 
 const AddButton = ({label, add}) => {
 
     return(
-        <button onClick={add}>{label}</button>
+        <button className='Button' onClick={add}>{label}</button>
     )
 }
 

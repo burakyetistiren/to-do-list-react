@@ -1,7 +1,7 @@
 import './App.css'
 
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Route, Switch} from 'react-router-dom'
 import { useHistory, withRouter } from 'react-router-dom'
 
 import AddButton from './parts/AddButton'
@@ -55,10 +55,12 @@ const App = () => {
     
       <Switch>
         <Route exact path="/home">
-          <div>
+          <div className="Header">
             <Title />
             <Input onClickInputArea={areaOnClick} text={text} setText={setText}/>
             <AddButton add={buttonOnClick}/>
+          </div>
+          <div className="Items">
             <Items items={items} itemClick={itemOnClick} removeItemClick={removeItemClick}/>
           </div>
         </Route>
