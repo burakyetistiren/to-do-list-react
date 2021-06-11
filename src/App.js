@@ -47,6 +47,17 @@ const App = () => {
     setText('')
   }
 
+  const saveItemClick = (setVisible, text, id) => {
+    if(text !== '')
+    {
+      const tempArray = [...items]
+      const index = tempArray.findIndex(item => item.id === id)
+      tempArray[index] = {id: id, description: text}
+      setItems([...tempArray])
+      setVisible('hidden')
+    }
+  }
+
   const removeItemClick = (id) => { 
     removeItem(id)
   }
@@ -59,6 +70,8 @@ const App = () => {
   const removeButtonOnClick = () => {
     const tempItems = []
     setItems([...tempItems])
+    setText('Enter a Task')
+    setDisable(true)
   }
   
   return(
@@ -71,7 +84,7 @@ const App = () => {
             <ClearButton removeButtonOnClick={removeButtonOnClick} />
           </div>
           <div className="Items">
-            <Items items={items} itemClick={itemOnClick} removeItemClick={removeItemClick}/>
+            <Items items={items} saveItemClick={saveItemClick} itemClick={itemOnClick} removeItemClick={removeItemClick}/>
           </div>
         </Route>
         <Route exact path="/info">

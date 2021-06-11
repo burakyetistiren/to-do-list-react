@@ -2,11 +2,11 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Item from './Item.js'
 
-const Items = ({items, removeItemClick, itemClick}) => {
+const Items = ({items, removeItemClick, saveItemClick, itemClick}) => {
     return(
         <div>
             {items.map((item) => (
-                <Item key={item.id} item={item} itemClick={itemClick} removeItemClick={removeItemClick}/>)
+                <Item key={item.id} item={item} itemClick={itemClick} saveItemClick={saveItemClick} removeItemClick={removeItemClick}/>)
             )}
         </div>
     )
