@@ -1,4 +1,4 @@
-.Button{
+.ClearButton{
     display: inline-block;
     background-color: black;
     color: white;
@@ -10,10 +10,11 @@
     font: optional;
     transition-duration: 0.1s;
     cursor: pointer;
-    font-family: Courier New, monospace;  
+    font-family: Courier New, monospace;
+    
 }
 
-.Button:hover{
+.ClearButton:hover{
     background-color: white; 
     color: black;
     border: 2px solid black;

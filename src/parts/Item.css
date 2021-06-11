@@ -24,6 +24,7 @@
     height: 30px;
     margin-left: auto;
     cursor: pointer;
+    font-family: Courier New, monospace;
 }
 .ButtonRemove:hover{
     background-color: white; 

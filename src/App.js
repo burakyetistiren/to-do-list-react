@@ -11,6 +11,7 @@ import Items from './parts/Items'
 import ItemInfo from './parts/ItemInfo'
 
 import {useState} from 'react'
+import ClearButton from './parts/ClearButton'
 
 
 const App = () => {
@@ -54,6 +55,11 @@ const App = () => {
     getItem(...items.filter(item => item.id === id))
     history?.push("/info")
   }
+
+  const removeButtonOnClick = () => {
+    const tempItems = []
+    setItems([...tempItems])
+  }
   
   return(
       <Switch>
@@ -62,6 +68,7 @@ const App = () => {
             <Title />
             <Input onClickInputArea={areaOnClick} text={text} setText={setText}/>
             <AddButton state={disable} add={buttonOnClick}/>
+            <ClearButton removeButtonOnClick={removeButtonOnClick} />
           </div>
           <div className="Items">
             <Items items={items} itemClick={itemOnClick} removeItemClick={removeItemClick}/>
