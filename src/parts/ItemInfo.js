@@ -33,4 +33,8 @@ const ItemInfo = ({item}) => {
 
 }
 
+ItemInfo.prototypes = {
+    item: PropTypes.object,
+}
+
 export default ItemInfo

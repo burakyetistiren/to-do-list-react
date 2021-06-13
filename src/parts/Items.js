@@ -12,6 +12,12 @@ const Items = ({items, removeItemClick, saveItemClick, itemClick}) => {
     )
 }
 
+Items.prototypes = {
+    items: PropTypes.array,
+    removeItemClick: PropTypes.func,
+    saveItemClick: PropTypes.func,
+    itemClick: PropTypes.func,
+}
 
 
 export default Items

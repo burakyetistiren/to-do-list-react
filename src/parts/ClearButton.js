@@ -8,5 +8,8 @@ const ClearButton = ({removeButtonOnClick}) => {
     )
 }
 
+ClearButton.prototypes = {
+    removeButtonOnClick: PropTypes.func,
+}
 
 export default ClearButton

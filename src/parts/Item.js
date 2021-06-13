@@ -31,7 +31,7 @@ const Item = ({item, removeItemClick, itemClick, saveItemClick}) => {
             <form style={{visibility: 'visible'}}>
                 <input className="InputEdit" onClick={onClickInput} value={text} onChange={(e) => setText(e.target.value)}></input>
             </form>
-            <button style={style, {visibility: 'visible'}} onClick={() => saveItemClick(setVisible, text, item.id)} className="ButtonRemove">Save</button>
+            <button style={{visibility: 'visible'}} onClick={() => saveItemClick(setVisible, text, item.id)} className="ButtonRemove">Save</button>
             <button style={style} className="ButtonRemove" onClick={editItemClick}>Edit</button>
             <button style={style} className="ButtonRemove" onClick={() => removeItemClick(item.id)}>Remove</button>
         </div> 
@@ -50,11 +50,18 @@ const Item = ({item, removeItemClick, itemClick, saveItemClick}) => {
                 <form style={{visibility: 'hidden'}}>
                     <input className="InputEdit" onClick={onClickInput} value={text} onChange={(e) => setText(e.target.value)}></input>
                 </form>
-                <button style={style, {visibility: 'hidden'}} onClick={() => saveItemClick(setVisible, text, item.id)} className="ButtonRemove">Save</button>
+                <button style={{visibility: 'hidden'}} onClick={() => saveItemClick(setVisible, text, item.id)} className="ButtonRemove">Save</button>
                 <button style={style} className="ButtonRemove" onClick={editItemClick}>Edit</button>
                 <button style={style} className="ButtonRemove" onClick={() => removeItemClick(item.id)}>Remove</button>
             </div>
         )
+}
+
+Item.prototypes = {
+    item: PropTypes.object,
+    removeItemClick: PropTypes.func,
+    itemClick: PropTypes.func,
+    saveItemClick: PropTypes.func,
 }
 
 
